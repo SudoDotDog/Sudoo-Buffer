@@ -18,6 +18,13 @@ export class StringBuffer {
         this._buffer = [];
     }
 
+    public get length(): number {
+        return this.build().length;
+    }
+    public get parts(): number {
+        return this._buffer.length;
+    }
+
     public addIfExist(value?: string): this {
 
         if (value === undefined || value === null) {

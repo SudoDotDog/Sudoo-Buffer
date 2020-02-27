@@ -6,16 +6,20 @@
 
 export class StringBuffer {
 
-    public static create(): StringBuffer {
+    public static create(initial?: string): StringBuffer {
 
-        return new StringBuffer();
+        return new StringBuffer(initial);
     }
 
     private _buffer: string[];
 
-    private constructor() {
+    private constructor(initial?: string) {
 
-        this._buffer = [];
+        if (initial) {
+            this._buffer = [initial];
+        } else {
+            this._buffer = [];
+        }
     }
 
     public get length(): number {

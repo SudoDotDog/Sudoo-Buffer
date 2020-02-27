@@ -8,16 +8,20 @@ type ObjectRecord<T, K extends keyof T> = Record<K, T[K]>;
 
 export class ObjectBuffer<T extends Record<string, any> = Record<string, any>> {
 
-    public static create<T extends Record<string, any> = Record<string, any>>(): ObjectBuffer<T> {
+    public static create<T extends Record<string, any> = Record<string, any>>(initial?: T): ObjectBuffer<T> {
 
-        return new ObjectBuffer<T>();
+        return new ObjectBuffer<T>(initial);
     }
 
     private readonly _object: ObjectRecord<T, keyof T>;
 
-    private constructor() {
+    private constructor(initial?: T) {
 
-        this._object = {} as T;
+        if (initial) {
+            this._object = initial;
+        } else {
+            this._object = {} as T;
+        }
     }
 
     public addIfExist<K extends keyof T>(key: K, value: T[K]): this {

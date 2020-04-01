@@ -11,14 +11,17 @@ export class NumberBuffer {
         return new NumberBuffer(initial);
     }
 
+    private readonly _initial: number;
     private _buffer: number;
     private _step: number;
 
     private constructor(initial?: number) {
 
         if (initial) {
+            this._initial = initial;
             this._buffer = initial;
         } else {
+            this._initial = 0;
             this._buffer = 0;
         }
         this._step = 1;
@@ -60,6 +63,12 @@ export class NumberBuffer {
     public getValue(): number {
 
         return this._buffer;
+    }
+
+    public resetValue(): this {
+
+        this._buffer = this._initial;
+        return this;
     }
 
     private _getStep(step?: number): number {

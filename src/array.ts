@@ -48,6 +48,30 @@ export class ArrayBuffer<T> {
         return this;
     }
 
+    public addList(valueList: T[]): this {
+
+        for (const value of valueList) {
+            this.add(value);
+        }
+        return this;
+    }
+
+    public addListIfExist(valueList: T[]): this {
+
+        for (const value of valueList) {
+            this.addIfExist(value);
+        }
+        return this;
+    }
+
+    public addListIfValid(valueList: T[], verifyFunction: ArrayBufferVerifyFunction<T>): this {
+
+        for (const value of valueList) {
+            this.addIfValid(value, verifyFunction);
+        }
+        return this;
+    }
+
     public reset(): this {
 
         this._buffer = this._initial;

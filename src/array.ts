@@ -48,7 +48,7 @@ export class ArrayBuffer<T> {
         return this;
     }
 
-    public addList(valueList: Array<T | undefined | null>): this {
+    public addList(valueList: T[]): this {
 
         for (const value of valueList) {
             this.add(value);
@@ -56,7 +56,7 @@ export class ArrayBuffer<T> {
         return this;
     }
 
-    public addListIfExist(valueList: T[]): this {
+    public addListIfExist(valueList: Array<T | undefined | null>): this {
 
         for (const value of valueList) {
             this.addIfExist(value);

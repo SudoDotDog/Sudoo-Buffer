@@ -1,6 +1,6 @@
 {
   "name": "@sudoo/buffer",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": ":hibiscus: Immutable buffers for JS",
   "repository": {
     "type": "git",

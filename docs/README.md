@@ -1,8 +1,8 @@
 # Sudoo-Buffer
 
-[![Build Status](https://travis-ci.com/SudoDotDog/Grindstrone-TypeScript.svg?branch=master)](https://travis-ci.com/SudoDotDog/Grindstrone-TypeScript)
-[![codecov](https://codecov.io/gh/SudoDotDog/Grindstrone-TypeScript/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Grindstrone-TypeScript)
-[![npm version](https://badge.fury.io/js/%40grindstone%2Fcore.svg)](https://badge.fury.io/js/%40grindstone%2Fcore)
-[![downloads](https://img.shields.io/npm/dm/@grindstone/core.svg)](https://www.npmjs.com/package/@grindstone/core)
+[![Build Status](https://travis-ci.com/SudoDotDog/Sudoo-Buffer.svg?branch=master)](https://travis-ci.com/SudoDotDog/Sudoo-Buffer)
+[![codecov](https://codecov.io/gh/SudoDotDog/Sudoo-Buffer/branch/master/graph/badge.svg)](https://codecov.io/gh/SudoDotDog/Sudoo-Buffer)
+[![npm version](https://badge.fury.io/js/%40sudoo%2Fbuffer.svg)](https://badge.fury.io/js/%40sudoo%2Fbuffer)
+[![downloads](https://img.shields.io/npm/dm/@sudoo/buffer.svg)](https://www.npmjs.com/package/@sudoo/buffer)
 
 :hibiscus: Immutable buffers for JS

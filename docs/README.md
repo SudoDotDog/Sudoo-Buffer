@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/@sudoo/buffer.svg)](https://www.npmjs.com/package/@sudoo/buffer)
 
 :hibiscus: Immutable buffers for JS
+
+## Install
+
+```sh
+yarn add @sudoo/buffer
+# Or
+npm install @sudoo/buffer --save
+```

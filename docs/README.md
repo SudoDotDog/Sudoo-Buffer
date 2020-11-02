@@ -14,3 +14,21 @@ yarn add @sudoo/buffer
 # Or
 npm install @sudoo/buffer --save
 ```
+
+## Array Buffer
+
+```ts
+import { ArrayBuffer } from "@sudoo/buffer";
+const buffer: ArrayBuffer<string> = ArrayBuffer.create();
+buffer.add(chance.string());
+buffer.length; // 1
+```
+
+## Number Buffer
+
+```ts
+import { NumberBuffer } from "@sudoo/buffer";
+const buffer: NumberBuffer = NumberBuffer.create();
+buffer.add();
+buffer.value; // 1
+```

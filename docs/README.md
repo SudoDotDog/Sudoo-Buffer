@@ -15,7 +15,12 @@ yarn add @sudoo/buffer
 npm install @sudoo/buffer --save
 ```
 
-## Array Buffer
+## Usage
+
+This package provide more feature than the following descriptions.  
+The usage documents are still working in progress. See source code for more details.
+
+### Array Buffer
 
 ```ts
 import { ArrayBuffer } from "@sudoo/buffer";
@@ -24,11 +29,33 @@ buffer.add(chance.string());
 buffer.length; // 1
 ```
 
-## Number Buffer
+### Number Buffer
 
 ```ts
 import { NumberBuffer } from "@sudoo/buffer";
 const buffer: NumberBuffer = NumberBuffer.create();
 buffer.add();
 buffer.value; // 1
+```
+
+### Object Buffer
+
+```ts
+import { ObjectBuffer } from "@sudoo/buffer";
+const buffer: ObjectBuffer = ObjectBuffer.create();
+buffer.add('key', 'value');
+buffer.add('addIfExist', undefined);
+buffer.build(); /* {
+    key: 'value',
+} */
+```
+
+### String Buffer
+
+```ts
+import { StringBuffer } from "@sudoo/buffer";
+const buffer: StringBuffer = StringBuffer.create();
+buffer.add('foo');
+buffer.add('bar');
+buffer.flush(); // foobar
 ```

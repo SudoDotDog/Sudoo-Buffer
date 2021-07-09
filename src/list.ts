@@ -1,15 +1,15 @@
 /**
  * @author WMXPY
  * @namespace Buffer
- * @description Array
+ * @description List
  */
 
-export type ArrayBufferVerifyFunction<T> = (element: T) => boolean;
-export class ArrayBuffer<T> {
+export type ListBufferVerifyFunction<T> = (element: T) => boolean;
+export class ListBuffer<T> {
 
-    public static create<T>(initial: T[] = []): ArrayBuffer<T> {
+    public static create<T>(initial: T[] = []): ListBuffer<T> {
 
-        return new ArrayBuffer<T>(initial);
+        return new ListBuffer<T>(initial);
     }
 
     private readonly _initial: T[];
@@ -34,7 +34,7 @@ export class ArrayBuffer<T> {
         return this.add(value);
     }
 
-    public addIfValid(value: T, verifyFunction: ArrayBufferVerifyFunction<T>): this {
+    public addIfValid(value: T, verifyFunction: ListBufferVerifyFunction<T>): this {
 
         if (!verifyFunction(value)) {
             return this;
@@ -64,7 +64,7 @@ export class ArrayBuffer<T> {
         return this;
     }
 
-    public addListIfValid(valueList: T[], verifyFunction: ArrayBufferVerifyFunction<T>): this {
+    public addListIfValid(valueList: T[], verifyFunction: ListBufferVerifyFunction<T>): this {
 
         for (const value of valueList) {
             this.addIfValid(value, verifyFunction);

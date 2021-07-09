@@ -7,22 +7,22 @@
 
 import { expect } from 'chai';
 import * as Chance from 'chance';
-import { ArrayBuffer } from '../../src';
+import { ListBuffer } from '../../src';
 
-describe('Given a {ArrayBuffer} Class', (): void => {
+describe('Given a {ListBuffer} Class', (): void => {
 
     const chance: Chance.Chance = new Chance('buffer-array');
 
     it('should be able to create', (): void => {
 
-        const buffer: ArrayBuffer<string> = ArrayBuffer.create();
+        const buffer: ListBuffer<string> = ListBuffer.create();
 
-        expect(buffer).to.be.instanceOf(ArrayBuffer);
+        expect(buffer).to.be.instanceOf(ListBuffer);
     });
 
     it('should be able to add element', (): void => {
 
-        const buffer: ArrayBuffer<string> = ArrayBuffer.create();
+        const buffer: ListBuffer<string> = ListBuffer.create();
         buffer.add(chance.string());
 
         expect(buffer).to.be.lengthOf(1);
@@ -30,7 +30,7 @@ describe('Given a {ArrayBuffer} Class', (): void => {
 
     it('should be able to add element if exists', (): void => {
 
-        const buffer: ArrayBuffer<string> = ArrayBuffer.create();
+        const buffer: ListBuffer<string> = ListBuffer.create();
         buffer.addIfExist(chance.string());
         buffer.addIfExist(null as any);
 

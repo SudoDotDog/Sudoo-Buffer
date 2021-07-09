@@ -4,7 +4,7 @@
  * @description Index
  */
 
-export * from "./array";
+export * from "./list";
 export * from "./number";
 export * from "./object";
 export * from "./string";

@@ -1,7 +1,7 @@
 {
   "name": "@sudoo/buffer",
   "version": "1.5.0",
-  "description": ":hibiscus: Immutable buffers for JS",
+  "description": "Immutable buffers for JS",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SudoDotDog/Sudoo-Buffer.git"
@@ -16,9 +16,7 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Buffer#readme",
   "devDependencies": {
-    "@sudoo/build-utils": "^1.0.0",
-    "@sudoo/license": "^1.1.0",
-    "@sudoo/triforce": "^3.0.0"
+    "@sudoo/triforce": "^3.2.0"
   },
   "nyc": {
     "extension": [
